@@ -1,0 +1,222 @@
+---
+title: "Covid Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: row
+    vertical_layout: fill
+    social: ["menu"]
+    source_code: embed
+    theme:
+      version: 4
+      bootswatch: flatly
+---
+
+
+```{r setup, include=FALSE}
+#### Covid Dashboard ####
+# Title: Index
+# Date: May 24, 2023
+# Description: This file loads in the 
+# necessary packages, functions, and data.
+# Then creates data visuals and analysis in 
+# the form of an interactive dashboard. 
+here::i_am("index.Rmd")
+
+#### Load Packages ####
+library(flexdashboard)
+library(tidyverse)
+library(palmerpenguins)
+library(plotly)
+library(DT)
+library(fontawesome)
+data("penguins")
+```
+
+
+Cases {data-navmenu="United States"}
+=======================================================================
+
+Sidebar {.sidebar}
+-----------------------------------------------------------------------
+
+### Cases Stats
+
+(content coming...)
+
+Row
+----------------------------------------------------------------------
+
+### Total Number of Cases in the United States
+
+```{r}
+valueBox("103,910,034", color = "#b52121")
+```
+
+### Total Percent of Cases 
+
+```{r}
+valueBox("30", icon = "fa-stethoscope", color = "#b52121")
+```
+
+
+Column {.tabset}
+-----------------------------------------------------------------------
+
+### Total Number of Covid Cases Map
+
+(Content Coming Soon...)
+
+### Covid Cases Percent of Population Map
+
+(Content Coming Soon...)
+
+### Graph Num
+
+(Content Coming Soon...)
+
+### Graph %
+
+(Content Coming Soon...)
+
+Deaths {data-navmenu="United States"}
+=======================================================================
+
+Sidebar {.sidebar}
+-----------------------------------------------------------------------
+
+### Deaths Stats
+
+(content coming...)
+
+Row
+----------------------------------------------------------------------
+
+### Total Number of Deaths in the United States
+
+```{r}
+valueBox("10,000", color = "#b52121")
+```
+
+### Total Percent of Deaths 
+
+```{r}
+valueBox("5%", icon = "fa-skull", color = "#b52121")
+```
+
+
+Column {.tabset}
+-----------------------------------------------------------------------
+
+### Total Number of Covid Deaths Map
+
+(Content Coming Soon...)
+
+### Covid Deaths Percent of Population Map
+
+(Content Coming Soon...)
+
+### Graph Num
+
+(Content Coming Soon...)
+
+### Graph %
+
+(Content Coming Soon...)
+
+Cases {data-navmenu="Oregon"}
+=======================================================================
+
+Sidebar {.sidebar}
+-----------------------------------------------------------------------
+
+### Cases Stats
+
+(content coming...)
+
+Row
+----------------------------------------------------------------------
+
+### Total Number of Cases in the Oregon
+
+```{r}
+valueBox("103,910", color = "#b52121")
+```
+
+### Total Percent of Cases 
+
+```{r}
+valueBox("3%", icon = "fa-stethoscope", color = "#b52121")
+```
+
+
+Column {.tabset}
+-----------------------------------------------------------------------
+
+### Total Number of Covid Cases Map
+
+(Content Coming Soon...)
+
+### Covid Cases Percent of Population Map
+
+(Content Coming Soon...)
+
+### Graph Num
+
+(Content Coming Soon...)
+
+### Graph %
+
+(Content Coming Soon...)
+
+Deaths {data-navmenu="Oregon"}
+=======================================================================
+
+Sidebar {.sidebar}
+-----------------------------------------------------------------------
+
+### Deaths Stats
+
+(content coming...)
+
+Row
+----------------------------------------------------------------------
+
+### Total Number of Deaths in Oregon
+
+```{r}
+valueBox("10,000", color = "#b52121")
+```
+
+### Total Percent of Deaths 
+
+```{r}
+valueBox("5%", icon = "fa-stethoscope", color = "#b52121")
+```
+
+
+Column {.tabset}
+-----------------------------------------------------------------------
+
+### Total Number of Covid Deaths Map
+
+(Content Coming Soon...)
+
+### Covid Deaths Percent of Population Map
+
+(Content Coming Soon...)
+
+### Graph Num
+
+(Content Coming Soon...)
+
+### Graph %
+
+(Content Coming Soon...)
+
+About
+=======================================================================
+
+(Content Coming Soon...)
+
+
+
