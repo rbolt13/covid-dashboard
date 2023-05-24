@@ -25,11 +25,9 @@ here::i_am("index.Rmd")
 #### Load Packages ####
 library(flexdashboard)
 library(tidyverse)
-library(palmerpenguins)
 library(plotly)
 library(DT)
 library(fontawesome)
-data("penguins")
 ```
 
 
