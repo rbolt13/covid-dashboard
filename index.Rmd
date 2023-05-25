@@ -48,19 +48,12 @@ Sidebar {.sidebar}
 
 **Most Cases**: (state) with (value) total cases. 
 
-**2nd Most**: (state) with (value) total cases. 
-
 **Least Cases**: (state) with (value) total cases. 
-
-**2nd Least**: (state) with (value) total cases. 
 
 **Highest Percentage**: (state) with (value)% of their population tested positive for covid-19.
 
-**2nd Highest**: (state) with (value)% of their population tested positive for covid-19.
-
 **Least Percentage**: (state) with (value)% of their population tested positive for covid-19.
 
-**2nd Least**: (state) with (value)% of their population tested positive for covid-19.
 
 Row
 ----------------------------------------------------------------------
@@ -89,11 +82,7 @@ Column {.tabset}
 
 (Content Coming Soon...)
 
-### Graph Num
-
-(Content Coming Soon...)
-
-### Graph %
+### Totals Table 
 
 (Content Coming Soon...)
 
@@ -107,19 +96,12 @@ Sidebar {.sidebar}
 
 **Most Deaths**: (state) with (value) total cases. 
 
-**2nd Most**: (state) with (value) total cases. 
-
 **Least Deaths**: (state) with (value) total cases. 
-
-**2nd Least**: (state) with (value) total cases. 
 
 **Highest Percentage**: (state) with (value)% of their population tested positive for covid-19.
 
-**2nd Highest**: (state) with (value)% of their population tested positive for covid-19.
-
 **Least Percentage**: (state) with (value)% of their population tested positive for covid-19.
 
-**2nd Least**: (state) with (value)% of their population tested positive for covid-19.
 
 Row
 ----------------------------------------------------------------------
@@ -148,11 +130,7 @@ Column {.tabset}
 
 (Content Coming Soon...)
 
-### Graph Num
-
-(Content Coming Soon...)
-
-### Graph %
+### Totals Table
 
 (Content Coming Soon...)
 
@@ -166,19 +144,11 @@ Sidebar {.sidebar}
 
 **Most Cases**: (county) with (value) total cases. 
 
-**2nd Most**: (county) with (value) total cases. 
-
 **Least Cases**: (county) with (value) total cases. 
-
-**2nd Least**: (county) with (value) total cases. 
 
 **Highest Percentage**: (county) with (value)% of their population tested positive for covid-19.
 
-**2nd Highest**: (county) with (value)% of their population tested positive for covid-19.
-
 **Least Percentage**: (county) with (value)% of their population tested positive for covid-19.
-
-**2nd Least**: (county) with (value)% of their population tested positive for covid-19.
 
 Row
 ----------------------------------------------------------------------
@@ -207,13 +177,10 @@ Column {.tabset}
 
 (Content Coming Soon...)
 
-### Graph Num
+### Totals Table
 
 (Content Coming Soon...)
 
-### Graph %
-
-(Content Coming Soon...)
 
 Deaths {data-navmenu="Oregon"}
 =======================================================================
@@ -225,19 +192,12 @@ Sidebar {.sidebar}
 
 **Most Deaths**: (county) with (value) total cases. 
 
-**2nd Most**: (county) with (value) total cases. 
-
 **Least Deaths**: (county) with (value) total cases. 
-
-**2nd Least**: (county) with (value) total cases. 
 
 **Highest Percentage**: (county) with (value)% of their population tested positive for covid-19.
 
-**2nd Highest**: (county) with (value)% of their population tested positive for covid-19.
-
 **Least Percentage**: (county) with (value)% of their population tested positive for covid-19.
 
-**2nd Least**: (county) with (value)% of their population tested positive for covid-19.
 
 Row
 ----------------------------------------------------------------------
@@ -266,13 +226,10 @@ Column {.tabset}
 
 (Content Coming Soon...)
 
-### Graph Num
+### Totals Table
 
 (Content Coming Soon...)
 
-### Graph %
-
-(Content Coming Soon...)
 
 Project {data-navmenu="About"}
 =======================================================================
