@@ -46,7 +46,21 @@ Sidebar {.sidebar}
 
 ### Cases Stats
 
-(content coming...)
+**Most Cases**: (state) with (value) total cases. 
+
+**2nd Most**: (state) with (value) total cases. 
+
+**Least Cases**: (state) with (value) total cases. 
+
+**2nd Least**: (state) with (value) total cases. 
+
+**Highest Percentage**: (state) with (value)% of their population tested positive for covid-19.
+
+**2nd Highest**: (state) with (value)% of their population tested positive for covid-19.
+
+**Least Percentage**: (state) with (value)% of their population tested positive for covid-19.
+
+**2nd Least**: (state) with (value)% of their population tested positive for covid-19.
 
 Row
 ----------------------------------------------------------------------
@@ -91,7 +105,21 @@ Sidebar {.sidebar}
 
 ### Deaths Stats
 
-(content coming...)
+**Most Deaths**: (state) with (value) total cases. 
+
+**2nd Most**: (state) with (value) total cases. 
+
+**Least Deaths**: (state) with (value) total cases. 
+
+**2nd Least**: (state) with (value) total cases. 
+
+**Highest Percentage**: (state) with (value)% of their population tested positive for covid-19.
+
+**2nd Highest**: (state) with (value)% of their population tested positive for covid-19.
+
+**Least Percentage**: (state) with (value)% of their population tested positive for covid-19.
+
+**2nd Least**: (state) with (value)% of their population tested positive for covid-19.
 
 Row
 ----------------------------------------------------------------------
@@ -136,7 +164,21 @@ Sidebar {.sidebar}
 
 ### Cases Stats
 
-(content coming...)
+**Most Cases**: (county) with (value) total cases. 
+
+**2nd Most**: (county) with (value) total cases. 
+
+**Least Cases**: (county) with (value) total cases. 
+
+**2nd Least**: (county) with (value) total cases. 
+
+**Highest Percentage**: (county) with (value)% of their population tested positive for covid-19.
+
+**2nd Highest**: (county) with (value)% of their population tested positive for covid-19.
+
+**Least Percentage**: (county) with (value)% of their population tested positive for covid-19.
+
+**2nd Least**: (county) with (value)% of their population tested positive for covid-19.
 
 Row
 ----------------------------------------------------------------------
@@ -181,7 +223,21 @@ Sidebar {.sidebar}
 
 ### Deaths Stats
 
-(content coming...)
+**Most Deaths**: (county) with (value) total cases. 
+
+**2nd Most**: (county) with (value) total cases. 
+
+**Least Deaths**: (county) with (value) total cases. 
+
+**2nd Least**: (county) with (value) total cases. 
+
+**Highest Percentage**: (county) with (value)% of their population tested positive for covid-19.
+
+**2nd Highest**: (county) with (value)% of their population tested positive for covid-19.
+
+**Least Percentage**: (county) with (value)% of their population tested positive for covid-19.
+
+**2nd Least**: (county) with (value)% of their population tested positive for covid-19.
 
 Row
 ----------------------------------------------------------------------
@@ -218,7 +274,28 @@ Column {.tabset}
 
 (Content Coming Soon...)
 
-About
+Project {data-navmenu="About"}
 =======================================================================
 
-(Content Coming Soon...)
+The COVID-19 pandemic has had a significant impact on the world, and the United States has been hit particularly hard. With millions of reported cases and hundreds of thousands of deaths, the need for accurate data analysis has become increasingly important. This data analysis project focuses on the cases and deaths related to COVID-19 in the United States and my home state, Oregon. The goal of this project is to explore and compare the trends in cases and deaths in both areas.
+
+Knowing and understanding the information provided in this dashboard is important in several ways. It enables policymakers to tailor measure such as social distancing and stay-at-home orders to specific regions, thereby reducing the overall spread of the virus. Additionally, understanding which areas have been most affected by the pandemic can help identify population groups that may be at higher risk. Finally, tracking trends can help identify areas where the virus is spreading more rapidly and inform decisions around the allocation of resources and policy interventions. Overall, knowing areas with high numbers and percents of COVID-19 cases and deaths is critical in the fight against the pandemic and minimizing its impact on individuals and communities.
+
+Author {data-navmenu="About"}
+=======================================================================
+
+<center>
+
+### Randi Bolt
+
+[Github](https://github.com/rbolt13) | [Blog](https://www.rbolt.me/) | [Mastodon](https://pnw.zone/@rbolt) | [Linkedin](https://www.linkedin.com/in/randi-bolt/)
+
+I am a data analyst who uses data science and machine learning techniques to extrapolate insight from data.
+
+I am constantly exploring new topics, and ways to improve upon past and current work.
+
+I graduated magna cum laude with a BS in Mathematics from Portland State University in 2022.
+
+I was born, raised, and am currently based out of Portland, Oregon.
+
+</center>
