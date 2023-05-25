@@ -1,0 +1,53 @@
+"","state","GEOID","variable","population"
+"1","Alabama","01","POP",4903185
+"2","Alaska","02","POP",731545
+"3","Arizona","04","POP",7278717
+"4","Arkansas","05","POP",3017804
+"5","California","06","POP",39512223
+"6","Colorado","08","POP",5758736
+"7","Delaware","10","POP",973764
+"8","District of Columbia","11","POP",705749
+"9","Connecticut","09","POP",3565287
+"10","Florida","12","POP",21477737
+"11","Georgia","13","POP",10617423
+"12","Idaho","16","POP",1787065
+"13","Hawaii","15","POP",1415872
+"14","Illinois","17","POP",12671821
+"15","Indiana","18","POP",6732219
+"16","Iowa","19","POP",3155070
+"17","Kansas","20","POP",2913314
+"18","Kentucky","21","POP",4467673
+"19","Louisiana","22","POP",4648794
+"20","Maine","23","POP",1344212
+"21","Maryland","24","POP",6045680
+"22","Massachusetts","25","POP",6892503
+"23","Michigan","26","POP",9986857
+"24","Minnesota","27","POP",5639632
+"25","Mississippi","28","POP",2976149
+"26","Missouri","29","POP",6137428
+"27","Montana","30","POP",1068778
+"28","Nebraska","31","POP",1934408
+"29","Nevada","32","POP",3080156
+"30","New Hampshire","33","POP",1359711
+"31","New Jersey","34","POP",8882190
+"32","New Mexico","35","POP",2096829
+"33","New York","36","POP",19453561
+"34","North Carolina","37","POP",10488084
+"35","North Dakota","38","POP",762062
+"36","Ohio","39","POP",11689100
+"37","Oklahoma","40","POP",3956971
+"38","Oregon","41","POP",4217737
+"39","Pennsylvania","42","POP",12801989
+"40","Rhode Island","44","POP",1059361
+"41","South Carolina","45","POP",5148714
+"42","South Dakota","46","POP",884659
+"43","Tennessee","47","POP",6829174
+"44","Texas","48","POP",28995881
+"45","Vermont","50","POP",623989
+"46","Utah","49","POP",3205958
+"47","Virginia","51","POP",8535519
+"48","Washington","53","POP",7614893
+"49","West Virginia","54","POP",1792147
+"50","Wisconsin","55","POP",5822434
+"51","Wyoming","56","POP",578759
+"52","Puerto Rico","72","POP",3193694
