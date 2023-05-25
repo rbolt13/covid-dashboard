@@ -24,4 +24,14 @@ Covid Dashboard is an interactive analysis tool that specifically examines Covid
 About this Repository
 </h2>
 
-In this repository, ... 
+In this repository, you'll find the following files:
+
+* `README.md`: A brief summary of the project and it's structure. 
+
+* `index.Rmd`: The R markdown file that is used to format the dashboard, and generate the dashboard. 
+
+* `_site.yml`: Defines the output directory as the docs folder. 
+
+* `docs`: The output directory for the HTML web dashboard. 
+
+* `raw-data`: The raw data, and index file used to load them. 
