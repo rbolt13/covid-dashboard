@@ -15,7 +15,7 @@ output:
 ```{r setup, include=FALSE}
 #### Covid Dashboard ####
 # Title: Index
-# Date: May 24, 2023
+# Date: May 25, 2023
 # Description: This file loads in the 
 # necessary packages, functions, and data.
 # Then creates data visuals and analysis in 
@@ -23,11 +23,18 @@ output:
 here::i_am("index.Rmd")
 
 #### Load Packages ####
-library(flexdashboard)
-library(tidyverse)
-library(plotly)
-library(DT)
-library(fontawesome)
+# flexdashboard: To create dashboards in R. 
+# fontawesome: To access "fa" icons.  
+# tidyverse: A collection of data-related packages.
+# plotly: Converts static plots to interactive plots.
+base::library(flexdashboard)
+base::library(fontawesome)
+base::library(tidyverse)
+base::library(plotly)
+
+#### Load Functions ####
+
+#### Load Data ###
 ```
 
 
@@ -215,6 +222,3 @@ About
 =======================================================================
 
 (Content Coming Soon...)
-
-
-
