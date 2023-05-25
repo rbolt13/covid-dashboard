@@ -16,4 +16,4 @@ Quick Link
 [Mastodon]:https://mastodon.social/@rbolt@pnw.zone
 [LinkedIn]:https://www.linkedin.com/in/randi-bolt/
 
-This repository contains the code used to create the [Covid Dashboard]().
+This repository contains the code used to create the [Covid Dashboard](https://rbolt13.github.io/covid-dashboard/).
