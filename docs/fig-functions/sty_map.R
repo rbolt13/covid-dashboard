@@ -18,7 +18,7 @@ sty_map <- function(map){
     # Subtitle and Footnote
     annotate(
       "text", x = -100, y = 60, 
-      label = "Discover the distribution of Covid-19 across different states with this interactive map.\n Simply hover over the map and utilize the crosshairs to draw a box around an area of interest to zoom in\n and examine the data at a closer level. To zoom out, double click on the map.") +
+      label = "Discover the distribution of Covid-19 with this interactive map.\n Simply hover over the map and utilize the crosshairs to draw a box around an area of interest\n to zoom in and examine the data at a closer level. To zoom out, double click on the map.") +
     annotate(
       "text", x = -100, y = 15, 
       label = "Graph by Randi Bolt\n Data from the NYT and Tidycensus Package\n Data Period: Jan 21, 2020 - March 23, 2023.") +
