@@ -84,9 +84,8 @@ Column {.tabset}
 ### Total Number of Covid Cases Map
 
 ```{r}
-ggplotly(us_case_num_map())
+ggplotly(us_case_num_map()) 
 ```
-
 
 ### Covid Cases Percent of Population Map
 
