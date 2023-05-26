@@ -21,11 +21,11 @@ us_states <- readr::read_csv("raw-data/us_states.csv")
 us_totals <- us_join %>%
   dplyr::filter(date == us_data_dates[[2,2]]) %>%
   dplyr::group_by(state) %>%
-  dplyr::summarise(
-    total_cases = cases,
-    total_cases_perc = cases_per_pop,
-    total_deaths = deaths,
-    total_deaths_perc = deaths_per_pop,
+  dplyr::reframe(
+    total_cases = base::sum(cases),
+    total_cases_perc = total_cases/population,
+    total_deaths = base::sum(deaths),
+    total_deaths_perc = total_deaths/population,
     population = population) 
 
 #### Assign Similar Case Structure for Join ####

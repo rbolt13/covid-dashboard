@@ -1869,11 +1869,12 @@ window.FlexDashboardComponents.push({
 <h2 class="sidebar">Sidebar</h2>
 <div id="cases-stats" class="section level3">
 <h3>Cases Stats</h3>
-<p><strong>Most Cases</strong>: (state) with (value) total cases.</p>
-<p><strong>Least Cases</strong>: (state) with (value) total cases.</p>
-<p><strong>Highest Percentage</strong>: (state) with (value)% of their
-population tested positive for covid-19.</p>
-<p><strong>Least Percentage</strong>: (state) with (value)% of their
+<p><strong>Most Cases</strong>: California with 12,169,158 total
+cases.</p>
+<p><strong>Least Cases</strong>: Vermont with 153,198 total cases.</p>
+<p><strong>Highest Percentage</strong>: Rhode Island with 43.59% of
+their population tested positive for covid-19.</p>
+<p><strong>Least Percentage</strong>: Maryland with 22.66% of their
 population tested positive for covid-19.</p>
 </div>
 </div>
@@ -1885,14 +1886,14 @@ class="section level3">
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<span class="value-output" data-color="#B52121" data-color-text="#fff" data-color-icon="#681e1e">103,910,034</span>
+<span class="value-output" data-color="#B52121" data-color-text="#fff" data-color-icon="#681e1e">103,801,403</span>
 </div>
 <div id="total-percent-of-cases" class="section level3">
 <h3>Total Percent of Cases</h3>
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<span class="value-output" data-icon="fa-stethoscope" data-color="#B52121" data-color-text="#fff" data-color-icon="#681e1e">30</span>
+<span class="value-output" data-icon="fa-stethoscope" data-color="#B52121" data-color-text="#fff" data-color-icon="#681e1e">31.32%</span>
 </div>
 </div>
 <div id="column" class="section level2 tabset">
@@ -1917,12 +1918,13 @@ class="section level3">
 <h2 class="sidebar">Sidebar</h2>
 <div id="deaths-stats" class="section level3">
 <h3>Deaths Stats</h3>
-<p><strong>Most Deaths</strong>: (state) with (value) total cases.</p>
-<p><strong>Least Deaths</strong>: (state) with (value) total cases.</p>
-<p><strong>Highest Percentage</strong>: (state) with (value)% of their
-population tested positive for covid-19.</p>
-<p><strong>Least Percentage</strong>: (state) with (value)% of their
-population tested positive for covid-19.</p>
+<p><strong>Most Deaths</strong>: California with 12,169,158 total
+deaths.</p>
+<p><strong>Least Deaths</strong>: Vermont with 153,198 total deaths.</p>
+<p><strong>Highest Percentage</strong>: Arizona with 33.67% of their
+population died from covid-19.</p>
+<p><strong>Least Percentage</strong>: Hawaii with 26.3% of their
+population died from covid-19.</p>
 </div>
 </div>
 <div id="row-1" class="section level2">
@@ -1933,14 +1935,14 @@ class="section level3">
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<span class="value-output" data-color="#B52121" data-color-text="#fff" data-color-icon="#681e1e">10,000</span>
+<span class="value-output" data-color="#B52121" data-color-text="#fff" data-color-icon="#681e1e">1,134,722</span>
 </div>
 <div id="total-percent-of-deaths" class="section level3">
 <h3>Total Percent of Deaths</h3>
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<span class="value-output" data-icon="fa-skull" data-color="#B52121" data-color-text="#fff" data-color-icon="#681e1e">5%</span>
+<span class="value-output" data-icon="fa-skull" data-color="#B52121" data-color-text="#fff" data-color-icon="#681e1e">0.34%</span>
 </div>
 </div>
 <div id="column-1" class="section level2 tabset">
@@ -2152,6 +2154,7 @@ base::library(plotly)
 #### Load Functions ####
 
 #### Load Data ###
+us_page_data &lt;- readr::read_csv("clean-data/us_page_data.csv")
 ```
 
 
@@ -2163,13 +2166,13 @@ Sidebar {.sidebar}
 
 ### Cases Stats
 
-**Most Cases**: (state) with (value) total cases. 
+**Most Cases**: `r us_page_data[[1,2]]` with `r formatC(us_page_data[[1,3]], format = "d", big.mark = ",")` total cases. 
 
-**Least Cases**: (state) with (value) total cases. 
+**Least Cases**: `r us_page_data[[2,2]]` with `r formatC(us_page_data[[2,3]], format = "d", big.mark = ",")` total cases. 
 
-**Highest Percentage**: (state) with (value)% of their population tested positive for covid-19.
+**Highest Percentage**: `r us_page_data[[3,2]]` with `r us_page_data[[3,3]]`% of their population tested positive for covid-19.
 
-**Least Percentage**: (state) with (value)% of their population tested positive for covid-19.
+**Least Percentage**: `r us_page_data[[4,2]]` with `r us_page_data[[4,3]]`% of their population tested positive for covid-19.
 
 
 Row
@@ -2178,13 +2181,13 @@ Row
 ### Total Number of Cases in the United States
 
 ```{r}
-valueBox("103,910,034", color = "#b52121")
+valueBox("103,801,403", color = "#b52121")
 ```
 
 ### Total Percent of Cases 
 
 ```{r}
-valueBox("30", icon = "fa-stethoscope", color = "#b52121")
+valueBox("31.32%", icon = "fa-stethoscope", color = "#b52121")
 ```
 
 
@@ -2211,13 +2214,13 @@ Sidebar {.sidebar}
 
 ### Deaths Stats
 
-**Most Deaths**: (state) with (value) total cases. 
+**Most Deaths**: `r us_page_data[[5,2]]` with `r formatC(us_page_data[[5,3]], format = "d", big.mark = ",")` total deaths.
 
-**Least Deaths**: (state) with (value) total cases. 
+**Least Deaths**: `r us_page_data[[6,2]]` with `r formatC(us_page_data[[6,3]], format = "d", big.mark = ",")` total deaths.
 
-**Highest Percentage**: (state) with (value)% of their population tested positive for covid-19.
+**Highest Percentage**: `r us_page_data[[7,2]]` with `r us_page_data[[7,3]]`% of their population died from covid-19.
 
-**Least Percentage**: (state) with (value)% of their population tested positive for covid-19.
+**Least Percentage**: `r us_page_data[[8,2]]` with `r us_page_data[[8,3]]`% of their population died from covid-19.
 
 
 Row
@@ -2226,13 +2229,13 @@ Row
 ### Total Number of Deaths in the United States
 
 ```{r}
-valueBox("10,000", color = "#b52121")
+valueBox("1,134,722", color = "#b52121")
 ```
 
 ### Total Percent of Deaths 
 
 ```{r}
-valueBox("5%", icon = "fa-skull", color = "#b52121")
+valueBox("0.34%", icon = "fa-skull", color = "#b52121")
 ```
 
 
