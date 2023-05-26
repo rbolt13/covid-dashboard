@@ -18,7 +18,7 @@ us_totals_join <- readr::read_csv("clean-data/us_totals_join.csv")
 
 #### Load Functions ####
 # sty_map(): Stylizes Map 
-base::source("fig-functions/functions/sty_map.R")
+base::source("fig-functions/sty_map.R")
 
 #### Function ####
 us_case_perc_map <- function(){
@@ -44,7 +44,7 @@ us_case_perc_map <- function(){
     ggplot2::coord_quickmap() +
     # labs
     ggplot2::labs(
-      title = "Percent of State Population with Confirmed Cases") +
+      title = "Percent of State Population Affected") +
     # Legend
     ggplot2::scale_fill_gradientn(
       colors = hcl.colors(5),

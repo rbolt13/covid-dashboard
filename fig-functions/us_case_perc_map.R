@@ -44,7 +44,7 @@ us_case_perc_map <- function(){
     ggplot2::coord_quickmap() +
     # labs
     ggplot2::labs(
-      title = "Percent of State Population with Confirmed Cases") +
+      title = "Percent of State Population Affected") +
     # Legend
     ggplot2::scale_fill_gradientn(
       colors = hcl.colors(5),

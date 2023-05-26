@@ -18,7 +18,7 @@ us_totals_join <- readr::read_csv("clean-data/us_totals_join.csv")
 
 #### Load Functions ####
 # sty_map(): Stylizes Map 
-base::source("fig-functions/functions/sty_map.R")
+base::source("fig-functions/sty_map.R")
 
 #### Function ####
 us_case_num_map <- function(){

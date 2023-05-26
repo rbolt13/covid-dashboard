@@ -87,7 +87,7 @@ Column {.tabset}
 ggplotly(us_case_num_map()) 
 ```
 
-### Percent of State Population 
+### Percent of State Population Affected
 
 ```{r}
 ggplotly(us_case_perc_map())
