@@ -38,6 +38,8 @@ base::library(reactable)
 # source(): Accept input in R. 
 base::source("fig-functions/us_case_num_map.R")
 base::source("fig-functions/us_case_perc_map.R")
+base::source("fig-functions/us_death_num_map.R")
+base::source("fig-functions/us_death_perc_map.R")
 
 #### Load Data ###
 us_page_data <- readr::read_csv("clean-data/us_page_data.csv")
@@ -167,11 +169,17 @@ Column {.tabset}
 
 ### Total Number of Covid Fatalities
 
-(Content Coming Soon...)
+```{r}
+ggplotly(us_death_num_map()) 
+```
+
 
 ### Percent of Population 
 
-(Content Coming Soon...)
+```{r}
+plotly::ggplotly(us_death_perc_map())
+```
+
 
 ### Table
 
