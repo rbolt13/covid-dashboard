@@ -37,3 +37,5 @@ In this repository, you'll find the following files:
 * `raw-data`: The raw data, and index file used to load them. 
 
 * `clean-data`: Clean data used to create visuals and analysis. 
+
+* `fig-functions`: The functions that create the data visuals. 
