@@ -15,7 +15,7 @@ output:
 ```{r setup, include=FALSE}
 #### Covid Dashboard ####
 # Title: Index
-# Date: May 25, 2023
+# Date: May 26, 2023
 # Description: This file loads in the 
 # necessary packages, functions, and data.
 # Then creates data visuals and analysis in 
@@ -81,13 +81,13 @@ valueBox("31.32%", icon = "fa-stethoscope", color = "#b52121")
 Column {.tabset}
 -----------------------------------------------------------------------
 
-### Total Number of Covid Cases Map
+### Total Number of Cases
 
 ```{r}
 ggplotly(us_case_num_map()) 
 ```
 
-### Covid Cases Percent of Population Map
+### Percent of State Population 
 
 ```{r}
 ggplotly(us_case_perc_map())
