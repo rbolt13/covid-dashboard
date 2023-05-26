@@ -35,3 +35,5 @@ In this repository, you'll find the following files:
 * `docs`: The output directory for the HTML web dashboard. 
 
 * `raw-data`: The raw data, and index file used to load them. 
+
+* `clean-data`: Clean data used to create visuals and analysis. 
