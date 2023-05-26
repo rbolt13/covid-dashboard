@@ -27,21 +27,21 @@ here::i_am("index.Rmd")
 # fontawesome: To access "fa" icons.  
 # tidyverse: A collection of data-related packages.
 # plotly: Converts static plots to interactive plots.
+# reactable: Reactive Tables. 
 base::library(flexdashboard)
 base::library(fontawesome)
 base::library(tidyverse)
 base::library(plotly)
+base::library(reactable)
 
 #### Load Functions ####
-# us_case_num_map(): Creates a map of US 
-#   case totals by state. 
-# us_case_perc_map(): Creates a map of US 
-#   case totals percentage by state. 
+# source(): Accept input in R. 
 base::source("fig-functions/us_case_num_map.R")
 base::source("fig-functions/us_case_perc_map.R")
 
 #### Load Data ###
 us_page_data <- readr::read_csv("clean-data/us_page_data.csv")
+us_totals <- readr::read_csv("clean-data/us_totals.csv")
 ```
 
 
@@ -71,7 +71,7 @@ Row
 valueBox("103,801,403", color = "#b52121")
 ```
 
-### Total Percent of Cases 
+### Percent of US Population
 
 ```{r}
 valueBox("31.32%", icon = "fa-stethoscope", color = "#b52121")
@@ -93,9 +93,41 @@ ggplotly(us_case_num_map())
 ggplotly(us_case_perc_map())
 ```
 
-### Totals Table 
+### Table 
 
-(Content Coming Soon...)
+```{r cases table}
+reactable::reactable(
+  us_totals,
+  # modify columns
+  columns = list(
+    ...1 = colDef(
+      show = F),
+    state = colDef(
+      name = "State"),
+    population = colDef(
+      name = "Population",
+      format = colFormat(
+        separators = TRUE)),
+    total_cases = colDef(
+      name = "Total Cases",
+      format = colFormat(
+        separators = TRUE)),
+    total_cases_perc = colDef(
+      name = "Percent of Population",
+      format = colFormat(
+        percent = TRUE,
+        digits = 2)),
+    total_deaths = colDef(show = F),
+    total_deaths_perc = colDef(show = F)),
+  # table formatting
+  defaultSorted = list(total_cases = "desc"),
+  bordered = TRUE,
+  highlight = TRUE,
+  showPageSizeOptions = TRUE,
+  pageSizeOptions = c(5, 10, 20, 50),
+  defaultPageSize = 10)
+```
+
 
 Deaths {data-navmenu="United States"}
 =======================================================================
@@ -117,13 +149,13 @@ Sidebar {.sidebar}
 Row
 ----------------------------------------------------------------------
 
-### Total Number of Deaths in the United States
+### Total Number of Covid Fatalities in the United States
 
 ```{r}
 valueBox("1,134,722", color = "#b52121")
 ```
 
-### Total Percent of Deaths 
+### Percent of US Population
 
 ```{r}
 valueBox("0.34%", icon = "fa-skull", color = "#b52121")
@@ -133,17 +165,49 @@ valueBox("0.34%", icon = "fa-skull", color = "#b52121")
 Column {.tabset}
 -----------------------------------------------------------------------
 
-### Total Number of Covid Deaths Map
+### Total Number of Covid Fatalities
 
 (Content Coming Soon...)
 
-### Covid Deaths Percent of Population Map
+### Percent of Population 
 
 (Content Coming Soon...)
 
-### Totals Table
+### Table
 
-(Content Coming Soon...)
+```{r deaths}
+reactable::reactable(
+  us_totals,
+  # modify columns
+  columns = list(
+    ...1 = colDef(
+      show = F),
+    state = colDef(
+      name = "State"),
+    population = colDef(
+      name = "Population",
+      format = colFormat(
+        separators = TRUE)),
+    total_deaths = colDef(
+      name = "Total Deaths",
+      format = colFormat(
+        separators = TRUE)),
+    total_deaths_perc = colDef(
+      name = "Percent of Population",
+      format = colFormat(
+        percent = TRUE,
+        digits = 2)),
+    total_cases = colDef(show = F),
+    total_cases_perc = colDef(show = F)),
+  # table formatting
+  defaultSorted = list(total_deaths = "desc"),
+  bordered = TRUE,
+  highlight = TRUE,
+  showPageSizeOptions = TRUE,
+  pageSizeOptions = c(5, 10, 20, 50),
+  defaultPageSize = 10)
+```
+
 
 Cases {data-navmenu="Oregon"}
 =======================================================================
@@ -170,7 +234,7 @@ Row
 valueBox("103,910", color = "#b52121")
 ```
 
-### Total Percent of Cases 
+### Percent of Cases 
 
 ```{r}
 valueBox("3%", icon = "fa-stethoscope", color = "#b52121")
