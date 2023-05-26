@@ -64,8 +64,9 @@ us_case_num_map <- function(){
     theme(
       text = element_text(size = 16, family = "Times"),
       plot.title = element_text(
-        hjust = .45,
+        hjust = .5,
         face = "bold"),
+      # Hide Lat and Long Lines and Ticks
       axis.text.x = element_blank(),
       axis.text.y = element_blank(),
       axis.ticks = element_blank(),

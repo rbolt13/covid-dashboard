@@ -64,7 +64,7 @@ us_case_num_map <- function(){
     theme(
       text = element_text(size = 16, family = "Times"),
       plot.title = element_text(
-        hjust = .45,
+        hjust = .5,
         face = "bold"),
       axis.text.x = element_blank(),
       axis.text.y = element_blank(),
