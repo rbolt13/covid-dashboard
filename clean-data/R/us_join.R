@@ -3,7 +3,7 @@
 # Date: May 25, 2023
 # Description: This file loads in
 # the raw us data sets and joins them.
-here::i_am("clean-data/us_join.R")
+here::i_am("clean-data/R/us_join.R")
 
 #### Load Packages #### 
 # tidyverse: A collection of data-related packages.
