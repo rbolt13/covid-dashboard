@@ -1,10 +1,9 @@
 #### Covid Dashboard ####
-# Title: Figure Functions  
-# - US Total Death Percent Map
-# Date: May 26, 2023
-# Description: This file loads in
-# the us_totals_join.csv data from 
-# the `clean-data` file, and creates 
+# Title: US Total Death Percent Map
+# Date: May 30, 2023
+# Input: us_totals_join.csv
+# Output: Map of US Total Death Percent
+# Description: This file creates 
 # a map of US Total Death Percent.
 here::i_am("fig-functions/us_death_perc_map.R")
 

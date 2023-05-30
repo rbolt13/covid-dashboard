@@ -1,10 +1,9 @@
 #### Covid Dashboard ####
-# Title: Figure Functions  
-# - US Total Deaths Number Map
-# Date: May 26, 2023
-# Description: This file loads in
-# the us_totals_join.csv data from 
-# the `clean-data` file, and creates 
+# Title: US Total Deaths Number Map
+# Date: May 30, 2023
+# Input: us_totals_join.csv
+# Output: Map of US Death Totals
+# Description: This file creates 
 # a map of US Total Death Numbers.
 here::i_am("fig-functions/us_death_num_map.R")
 
@@ -30,7 +29,7 @@ us_death_num_map <- function(){
       # fill = total deaths
       fill = total_deaths,
       text = paste("State:", state, 
-                   "\nTotal Deathss:",
+                   "\nTotal Deaths:",
                    base::formatC(
                      total_deaths,
                      format = "d",

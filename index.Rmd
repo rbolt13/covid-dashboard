@@ -42,8 +42,8 @@ base::source("fig-functions/us_death_num_map.R")
 base::source("fig-functions/us_death_perc_map.R")
 base::source("fig-functions/or_case_num_map.R")
 base::source("fig-functions/or_case_perc_map.R")
-# base::source("fig-functions/or_death_num_map.R")
-# base::source("fig-functions/or_death_perc_map.R")
+base::source("fig-functions/or_death_num_map.R")
+base::source("fig-functions/or_death_perc_map.R")
 
 #### Load Data ###
 us_page_data <- readr::read_csv("clean-data/us_page_data.csv")
@@ -272,7 +272,7 @@ plotly::ggplotly(or_case_perc_map())
 ```
 
 
-### Totals Table
+### Table
 
 ```{r or cases table}
 reactable::reactable(
@@ -348,14 +348,14 @@ Column {.tabset}
 ### Total Number of Covid Fatalities
 
 ```{r or deaths num map}
-# 
+plotly::ggplotly(or_death_num_map())
 ```
 
 
 ### Percent of Population
 
 ```{r or death perc map}
-# plotly::ggplotly(or_death_perc_map())
+plotly::ggplotly(or_death_perc_map())
 ```
 
 

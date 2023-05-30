@@ -1,11 +1,11 @@
 #### Covid Dashboard ####
-# Title: US Total Deaths Number Map
-# Date: May 30, 2023
-# Input: us_totals_join.csv
-# Output: Map of US Death Totals
+# Title: OR Total Deaths Number Map
+# Date: May 26, 2023
+# Input: or_totals_join.csv
+# Output: Map of OR Death Totals
 # Description: This file creates 
-# a map of US Total Death Numbers.
-here::i_am("fig-functions/us_death_num_map.R")
+# a map of OR Total Death Numbers.
+here::i_am("fig-functions/or_death_num_map.R")
 
 #### Load Packages #### 
 # tidyverse: A collection of data-related packages.
@@ -13,22 +13,22 @@ base::library(tidyverse)
 
 #### Load Data ####
 # read_csv(): Reads csv file. 
-us_totals_join <- readr::read_csv("clean-data/us_totals_join.csv")
+or_totals_join <- readr::read_csv("clean-data/or_totals_join.csv")
 
 #### Load Functions ####
 # sty_map(): Stylizes Map 
-base::source("fig-functions/sty_map.R")
+base::source("fig-functions/or_sty_map.R")
 
 #### Function ####
-us_death_num_map <- function(){
-  vis <- us_totals_join %>%
+or_death_num_map <- function(){
+  vis <- or_totals_join %>%
     ggplot2::ggplot(ggplot2::aes(
-      long,
+      lon,
       lat, 
       group = group,
       # fill = total deaths
       fill = total_deaths,
-      text = paste("State:", state, 
+      text = paste("County:", county, 
                    "\nTotal Deaths:",
                    base::formatC(
                      total_deaths,
@@ -44,13 +44,13 @@ us_death_num_map <- function(){
     ggplot2::coord_quickmap() + 
     # labs
     ggplot2::labs(
-      title = "Total Covid Fatalities By State") +
+      title = "Total Covid Fatalities By County") +
     # Legend
     ggplot2::scale_fill_gradientn(
       colours = hcl.colors(5),
       name = "Total Number of Deaths",
-      breaks = c(25000, 50000, 75000, 100000),
-      labels = c("25,000", "50,000", "75,000", "100,000")) 
-  vis <- sty_map(vis)
+      breaks = c(300, 600, 900, 1200),
+      labels = c("300", "600", "900", "1,200")) 
+  vis <- or_sty_map(vis)
   return(vis)
 }
