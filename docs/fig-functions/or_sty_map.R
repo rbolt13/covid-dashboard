@@ -17,10 +17,10 @@ or_sty_map <- function(map){
     ggplot2::theme_minimal() +
     # Subtitle and Footnote
     annotate(
-      "text", x = -100, y = 60, 
+      "text", x = -120, y = 47.5,
       label = "Discover the distribution of Covid-19 with this interactive map.\n Simply hover over the map and utilize the crosshairs to draw a box around an area of interest\n to zoom in and examine the data at a closer level. To zoom out, double click on the map.") +
     annotate(
-      "text", x = -100, y = 15, 
+      "text", x = -120, y = 41,
       label = "Graph by Randi Bolt\n Data from the NYT and Tidycensus Package\n Data Period: Feb 28, 2020 - May 13, 2022.") +
     # labs
     labs(x = "", y = "") +

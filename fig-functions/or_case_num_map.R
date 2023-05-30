@@ -51,6 +51,6 @@ or_case_num_map <- function(){
       name = "Total Number of Cases",
       breaks = c(25000, 50000, 75000, 100000),
       labels = c("25,000", "50,000", "75,000", "100,000")) 
-  vis <- sty_map(vis)
+  vis <- or_sty_map(vis)
   return(vis)
 }
