@@ -1,12 +1,15 @@
 #### Covid Dashboard ####
-# Title: Clean Data  - Data Dates
+# Title: Data Dates
 # Date: May 26, 2023
+# Input: id_join, c("id")
+# Output: id_data_dates.csv
 # Description: This function loads in
-# the joined data sets and an id and 
-# extracts the start and end dates as 
-# a data.frame. Then it saves the df
-# as a id_data_date.csv file in the 
+# the joined data sets and an id, extracts 
+# the start and end dates as a data frame, and
+# then it saves that df as a .csv file in the 
 # 'clean-data' folder.
+# Note: 
+#   - "id" is used to identify US or OR. 
 here::i_am("clean-data/R/data_dates.R")
 
 #### Load Packages #### 

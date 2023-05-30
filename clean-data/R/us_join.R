@@ -1,8 +1,10 @@
 #### Covid Dashboard ####
-# Title: Clean Data  - US Join
-# Date: May 25, 2023
-# Description: This file loads in
-# the raw us data sets and joins them.
+# Title: US Join
+# Date: May 30, 2023
+# Input: us_covid, us_pop
+# Output: us_join
+# Description: This file loads in the
+# raw us data sets and joins them.
 here::i_am("clean-data/R/us_join.R")
 
 #### Load Packages #### 
