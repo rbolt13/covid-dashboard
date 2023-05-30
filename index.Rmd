@@ -40,10 +40,16 @@ base::source("fig-functions/us_case_num_map.R")
 base::source("fig-functions/us_case_perc_map.R")
 base::source("fig-functions/us_death_num_map.R")
 base::source("fig-functions/us_death_perc_map.R")
+# base::source("fig-functions/or_case_num_map.R")
+# base::source("fig-functions/or_case_perc_map.R")
+# base::source("fig-functions/or_death_num_map.R")
+# base::source("fig-functions/or_death_perc_map.R")
 
 #### Load Data ###
 us_page_data <- readr::read_csv("clean-data/us_page_data.csv")
 us_totals <- readr::read_csv("clean-data/us_totals.csv")
+or_page_data <- readr::read_csv("clean-data/or_page_data.csv")
+or_totals <- readr::read_csv("clean-data/or_totals.csv")
 ```
 
 
@@ -69,13 +75,13 @@ Row
 
 ### Total Number of Cases in the United States
 
-```{r}
+```{r us case num box}
 valueBox("103,801,403", color = "#b52121")
 ```
 
 ### Percent of US Population
 
-```{r}
+```{r us case perc box}
 valueBox("31.32%", icon = "fa-stethoscope", color = "#b52121")
 ```
 
@@ -85,19 +91,19 @@ Column {.tabset}
 
 ### Total Number of Cases
 
-```{r}
-ggplotly(us_case_num_map()) 
+```{r us case num map}
+plotly::ggplotly(us_case_num_map()) 
 ```
 
 ### Percent of State Population Affected
 
-```{r}
-ggplotly(us_case_perc_map())
+```{r us case perc map}
+plotly::ggplotly(us_case_perc_map())
 ```
 
 ### Table 
 
-```{r cases table}
+```{r us cases table}
 reactable::reactable(
   us_totals,
   # modify columns
@@ -153,13 +159,13 @@ Row
 
 ### Total Number of Covid Fatalities in the United States
 
-```{r}
+```{r us death num box}
 valueBox("1,134,722", color = "#b52121")
 ```
 
 ### Percent of US Population
 
-```{r}
+```{r us death perc box}
 valueBox("0.34%", icon = "fa-skull", color = "#b52121")
 ```
 
@@ -169,21 +175,21 @@ Column {.tabset}
 
 ### Total Number of Covid Fatalities
 
-```{r}
+```{r us death num map}
 ggplotly(us_death_num_map()) 
 ```
 
 
 ### Percent of Population 
 
-```{r}
+```{r us death perc map}
 plotly::ggplotly(us_death_perc_map())
 ```
 
 
 ### Table
 
-```{r deaths}
+```{r us deaths table}
 reactable::reactable(
   us_totals,
   # modify columns
@@ -225,27 +231,27 @@ Sidebar {.sidebar}
 
 ### Cases Stats
 
-**Most Cases**: (county) with (value) total cases. 
+**Most Cases**: `r or_page_data[[1,2]]` with `r formatC(or_page_data[[1,3]], format = "d", big.mark = ",")` total cases. 
 
-**Least Cases**: (county) with (value) total cases. 
+**Least Cases**: `r or_page_data[[2,2]]` with `r formatC(or_page_data[[2,3]], format = "d", big.mark = ",")` total cases. 
 
-**Highest Percentage**: (county) with (value)% of their population tested positive for covid-19.
+**Highest Percentage**: `r or_page_data[[3,2]]` with `r or_page_data[[3,3]]`% of their population tested positive for covid-19.
 
-**Least Percentage**: (county) with (value)% of their population tested positive for covid-19.
+**Least Percentage**: `r or_page_data[[4,2]]` with `r or_page_data[[4,3]]`% of their population tested positive for covid-19.
 
 Row
 ----------------------------------------------------------------------
 
 ### Total Number of Cases in the Oregon
 
-```{r}
-valueBox("103,910", color = "#b52121")
+```{r or case num box}
+valueBox("738,830", color = "#b52121")
 ```
 
 ### Percent of Cases 
 
-```{r}
-valueBox("3%", icon = "fa-stethoscope", color = "#b52121")
+```{r or case perc box}
+valueBox("17.52%", icon = "fa-stethoscope", color = "#b52121")
 ```
 
 
@@ -254,15 +260,53 @@ Column {.tabset}
 
 ### Total Number of Covid Cases Map
 
-(Content Coming Soon...)
+```{r or case num map}
+# plotly::ggplotly(or_case_num_map()) 
+```
+
 
 ### Covid Cases Percent of Population Map
 
-(Content Coming Soon...)
+```{r or case perc map}
+# plotly::ggplotly(or_case_perc_map()) 
+```
+
 
 ### Totals Table
 
-(Content Coming Soon...)
+```{r or cases table}
+reactable::reactable(
+  or_totals,
+  # modify columns
+  columns = list(
+    ...1 = colDef(
+      show = F),
+    county = colDef(
+      name = "County"),
+    population = colDef(
+      name = "Population",
+      format = colFormat(
+        separators = TRUE)),
+    total_cases = colDef(
+      name = "Total Cases",
+      format = colFormat(
+        separators = TRUE)),
+    total_cases_perc = colDef(
+      name = "Percent of Population",
+      format = colFormat(
+        percent = TRUE,
+        digits = 2)),
+    total_deaths = colDef(show = F),
+    total_deaths_perc = colDef(show = F)),
+  # table formatting
+  defaultSorted = list(total_cases = "desc"),
+  bordered = TRUE,
+  highlight = TRUE,
+  showPageSizeOptions = TRUE,
+  pageSizeOptions = c(5, 10, 20, 30, 36),
+  defaultPageSize = 10)
+```
+
 
 
 Deaths {data-navmenu="Oregon"}
@@ -273,45 +317,83 @@ Sidebar {.sidebar}
 
 ### Deaths Stats
 
-**Most Deaths**: (county) with (value) total cases. 
+**Most Deaths**: `r or_page_data[[5,2]]` with `r formatC(or_page_data[[5,3]], format = "d", big.mark = ",")` total deaths.
 
-**Least Deaths**: (county) with (value) total cases. 
+**Least Deaths**: `r or_page_data[[6,2]]` with `r formatC(or_page_data[[6,3]], format = "d", big.mark = ",")` total deaths.
 
-**Highest Percentage**: (county) with (value)% of their population tested positive for covid-19.
+**Highest Percentage**: `r or_page_data[[7,2]]` with `r or_page_data[[7,3]]`% of their population died from covid-19.
 
-**Least Percentage**: (county) with (value)% of their population tested positive for covid-19.
+**Least Percentage**: `r or_page_data[[8,2]]` with `r or_page_data[[8,3]]`% of their population died from covid-19.
 
 
 Row
 ----------------------------------------------------------------------
 
-### Total Number of Deaths in Oregon
+### Total Number of Covid Fatalitites in Oregon
 
-```{r}
-valueBox("10,000", color = "#b52121")
+```{r or death num box}
+valueBox("7,560", color = "#b52121")
 ```
 
-### Total Percent of Deaths 
+### Percent of OR Population
 
-```{r}
-valueBox("5%", icon = "fa-stethoscope", color = "#b52121")
+```{r or death perc box}
+valueBox("0.18%", icon = "fa-stethoscope", color = "#b52121")
 ```
 
 
 Column {.tabset}
 -----------------------------------------------------------------------
 
-### Total Number of Covid Deaths Map
+### Total Number of Covid Fatalities
 
-(Content Coming Soon...)
+```{r or deaths num map}
+# 
+```
 
-### Covid Deaths Percent of Population Map
 
-(Content Coming Soon...)
+### Percent of Population
 
-### Totals Table
+```{r or death perc map}
+# plotly::ggplotly(or_death_perc_map())
+```
 
-(Content Coming Soon...)
+
+### Table
+
+```{r or deaths table}
+reactable::reactable(
+  or_totals,
+  # modify columns
+  columns = list(
+    ...1 = colDef(
+      show = F),
+    county = colDef(
+      name = "County"),
+    population = colDef(
+      name = "Population",
+      format = colFormat(
+        separators = TRUE)),
+    total_deaths = colDef(
+      name = "Total Deaths",
+      format = colFormat(
+        separators = TRUE)),
+    total_deaths_perc = colDef(
+      name = "Percent of Population",
+      format = colFormat(
+        percent = TRUE,
+        digits = 2)),
+    total_cases = colDef(show = F),
+    total_cases_perc = colDef(show = F)),
+  # table formatting
+  defaultSorted = list(total_deaths = "desc"),
+  bordered = TRUE,
+  highlight = TRUE,
+  showPageSizeOptions = TRUE,
+  pageSizeOptions = c(5, 10, 20, 30, 36),
+  defaultPageSize = 10)
+```
+
 
 
 Project {data-navmenu="About"}
