@@ -41,7 +41,7 @@ base::source("fig-functions/us_case_perc_map.R")
 base::source("fig-functions/us_death_num_map.R")
 base::source("fig-functions/us_death_perc_map.R")
 base::source("fig-functions/or_case_num_map.R")
-# base::source("fig-functions/or_case_perc_map.R")
+base::source("fig-functions/or_case_perc_map.R")
 # base::source("fig-functions/or_death_num_map.R")
 # base::source("fig-functions/or_death_perc_map.R")
 
@@ -268,7 +268,7 @@ plotly::ggplotly(or_case_num_map())
 ### Covid Cases Percent of Population Map
 
 ```{r or case perc map}
-# plotly::ggplotly(or_case_perc_map()) 
+plotly::ggplotly(or_case_perc_map()) 
 ```
 
 

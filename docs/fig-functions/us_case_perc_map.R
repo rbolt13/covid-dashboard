@@ -1,10 +1,9 @@
 #### Covid Dashboard ####
-# Title: Figure Functions  
-# - US Total Case Percent Map
-# Date: May 26, 2023
-# Description: This file loads in
-# the us_totals_join.csv data from 
-# the `clean-data` file, and creates 
+# Title: US Total Case Percent Map
+# Date: May 30, 2023
+# Input: us_totals.join.csv
+# Output: Map of US Cases Percent
+# Description: This file creates 
 # a map of US Total Case Percent.
 here::i_am("fig-functions/us_case_perc_map.R")
 
