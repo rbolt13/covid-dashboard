@@ -1,11 +1,10 @@
 #### Covid Dashboard ####
-# Title: Figure Functions  
-# - US Total Case Number Map
+# Title: US Total Case Number Map
 # Date: May 26, 2023
-# Description: This file loads in
-# the us_totals_join.csv data from 
-# the `clean-data` file, and creates 
-# a map of US Total Case Numbers.
+# Input: us_totals_join
+# Output: Map of US Total Cases 
+# Description: This file creates a map of US 
+# Total Case Numbers.
 here::i_am("fig-functions/us_case_num_map.R")
 
 #### Load Packages #### 

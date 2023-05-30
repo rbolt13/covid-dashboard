@@ -40,7 +40,7 @@ base::source("fig-functions/us_case_num_map.R")
 base::source("fig-functions/us_case_perc_map.R")
 base::source("fig-functions/us_death_num_map.R")
 base::source("fig-functions/us_death_perc_map.R")
-# base::source("fig-functions/or_case_num_map.R")
+base::source("fig-functions/or_case_num_map.R")
 # base::source("fig-functions/or_case_perc_map.R")
 # base::source("fig-functions/or_death_num_map.R")
 # base::source("fig-functions/or_death_perc_map.R")
@@ -261,7 +261,7 @@ Column {.tabset}
 ### Total Number of Covid Cases Map
 
 ```{r or case num map}
-# plotly::ggplotly(or_case_num_map()) 
+plotly::ggplotly(or_case_num_map()) 
 ```
 
 

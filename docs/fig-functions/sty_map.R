@@ -1,9 +1,9 @@
 #### Covid Dashboard ####
 # Title: Style Map Function 
 # Date: May 26, 2023
-# Description: This file takes
-# in a ggplot map, and styles 
-# it. 
+# Input: ggplot image.
+# Output: ggplot image.
+# Description: This file styles a ggplot image. 
 here::i_am("fig-functions/sty_map.R")
 
 #### Load Packages #### 

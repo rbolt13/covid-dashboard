@@ -1,17 +1,17 @@
 #### Covid Dashboard ####
-# Title: Style Map Function 
+# Title: Oregon Style Map Function 
 # Date: May 26, 2023
 # Input: ggplot image.
 # Output: ggplot image.
 # Description: This file styles a ggplot image. 
-here::i_am("fig-functions/sty_map.R")
+here::i_am("fig-functions/or_sty_map.R")
 
 #### Load Packages #### 
 # tidyverse: A collection of data-related packages.
 base::library(tidyverse)
 
 #### Style Map Function ####
-sty_map <- function(map){
+or_sty_map <- function(map){
   sty_map <- map + 
     # plot theme
     ggplot2::theme_minimal() +
@@ -21,7 +21,7 @@ sty_map <- function(map){
       label = "Discover the distribution of Covid-19 with this interactive map.\n Simply hover over the map and utilize the crosshairs to draw a box around an area of interest\n to zoom in and examine the data at a closer level. To zoom out, double click on the map.") +
     annotate(
       "text", x = -100, y = 15, 
-      label = "Graph by Randi Bolt\n Data from the NYT and Tidycensus Package\n Data Period: Jan 21, 2020 - March 23, 2023.") +
+      label = "Graph by Randi Bolt\n Data from the NYT and Tidycensus Package\n Data Period: Feb 28, 2020 - May 13, 2022.") +
     # labs
     labs(x = "", y = "") +
     # theme
