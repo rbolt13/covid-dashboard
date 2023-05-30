@@ -1,5 +1,5 @@
 #### Covid Dashboard ####
-# Title: Clean Data - Index
+# Title: Clean Data
 # Date: May 26, 2023
 # Input: 'raw-data'
 # Output: 'clean-data'
