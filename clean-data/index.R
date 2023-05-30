@@ -6,6 +6,8 @@
 # Description: This file loads in the `raw-data`, and takes
 # the data sets through cleaning functions that clean and 
 # save the data as .csv files in the `clean-data` folder.
+# To Do: Make one functions for join, totals, totals-join, 
+# page_data, and page_totals. 
 here::i_am("clean-data/index.R")
 
 #### Load Data ####
